@@ -1,70 +1,68 @@
-public class LinkedList {
+public class LL {
     Node head;
-
     class Node {
         String data;
         Node next;
 
-        Node(String data) {
+        Node(String data){
             this.data = data;
             this.next = null;
         }
     }
 
-    // Add First And Last
-
-    public void addFirst(String data) {
+    // Add first
+    public void addFirst(String data){
         Node newNode = new Node(data);
-        if (head == null) {
+        if(head == null){
             head = newNode;
             return;
         }
-
         newNode.next = head;
         head = newNode;
     }
 
-    // Add Last
+    //Add Last
 
-    public void addLast(String data) {
+    public void addLast(String data){
         Node newNode = new Node(data);
-        if (head == null) {
+        if(head == null){
             head = newNode;
             return;
         }
-
         Node currNode = head;
-        while (currNode.next != null) {  
+        while(currNode.next != null){
             currNode = currNode.next;
         }
-
-        currNode.next = newNode;  
+        currNode.next = newNode;
     }
 
-    // Print List
+    //Print the list
 
-    public void printList() {
-        if (head == null) {
+    public void printList()
+    {
+        if(head == null){
             System.out.println("List is Empty");
             return;
         }
         Node currNode = head;
-        while (currNode != null) {
-            System.out.print(currNode.data + " -> ");
+        while(currNode != null){
+            System.out.print(currNode.data + "->");
             currNode = currNode.next;
         }
         System.out.println("NULL");
     }
 
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.addFirst("a");
-        list.addFirst("is");
-        list.printList();  
-        list.addLast("List");
-        list.printList();  
 
-        list.addFirst("this");
-        list.printList();  
+
+    
+    public static void main(String[] args) {
+        LL l = new LL();
+        l.addFirst("Sharad");
+        l.addFirst("Hello");
+        l.printList();
+        l.addLast("Singh");
+        l.printList();
+        
+
     }
 }
