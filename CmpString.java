@@ -15,7 +15,7 @@ public class CmpString {
         else{
             System.out.println("Not equal");
         }
-
+        sc.close();
     }
     
 }

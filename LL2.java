@@ -1,4 +1,4 @@
-public class LinkedList {
+public class LL2 {
     Node head;
     class Node {
         String data;

@@ -1,6 +1,6 @@
-public class LL {
-    Node head;
-    class Node {
+public class LL{
+Node head;
+    class Node{
         String data;
         Node next;
 
@@ -10,59 +10,38 @@ public class LL {
         }
     }
 
-    // Add first
     public void addFirst(String data){
         Node newNode = new Node(data);
-        if(head == null){
+        if (head == null){
             head = newNode;
             return;
+
         }
         newNode.next = head;
         head = newNode;
     }
 
-    //Add Last
-
-    public void addLast(String data){
-        Node newNode = new Node(data);
+    public void printList(){
         if(head == null){
-            head = newNode;
-            return;
+            System.out.println("List is empty");
         }
-        Node currNode = head;
-        while(currNode.next != null){
-            currNode = currNode.next;
-        }
-        currNode.next = newNode;
-    }
 
-    //Print the list
-
-    public void printList()
-    {
-        if(head == null){
-            System.out.println("List is Empty");
-            return;
-        }
         Node currNode = head;
         while(currNode != null){
-            System.out.print(currNode.data + "->");
+            System.out.print(currNode.data + "=>");
             currNode = currNode.next;
+
         }
-        System.out.println("NULL");
+        System.out.println("NUll");
     }
 
 
-
-    
     public static void main(String[] args) {
-        LL l = new LL();
-        l.addFirst("Sharad");
-        l.addFirst("Hello");
-        l.printList();
-        l.addLast("Singh");
-        l.printList();
-        
-
+       LL l = new LL();
+       l.addFirst("Hello");
+       l.addFirst("kuamr");
+       l.addFirst("Hellsdfo");
+       l.addFirst("Hellosdf");
+       l.printList();
     }
 }

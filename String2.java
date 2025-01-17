@@ -7,5 +7,7 @@ public class String2 {
         for(int i = 0; i < name.length(); i++ ){
             System.out.print(name.charAt(i));
         }
+
+        sc.close();
     }
 }
